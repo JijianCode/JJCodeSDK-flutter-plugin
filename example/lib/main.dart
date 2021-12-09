@@ -28,10 +28,10 @@ class _MyAppState extends State<MyApp> {
 
   _initFluwx() async {
     await fluwx.registerWxApi(
-        appId: "wx522437950f355099",
+        appId: "xxxx",
         doOnAndroid: true,
         doOnIOS: true,
-        universalLink: "https://b6e148bac5a27cad.stul.sharetrace.com/ulink/");
+        universalLink: "https://xxxxx.com/ulink/");
   }
 
   Future responseHandler(Map<String, dynamic> data) async {
