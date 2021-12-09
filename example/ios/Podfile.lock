@@ -1,0 +1,39 @@
+PODS:
+  - Flutter (1.0.0)
+  - fluwx (0.0.1):
+    - Flutter
+    - WechatOpenSDK_Fuck (~> 1.9.2)
+  - JijiancodeSDK (1.2.0)
+  - jjcode_flutter_plugin (0.0.1):
+    - Flutter
+    - JijiancodeSDK (~> 1.2.0)
+  - WechatOpenSDK_Fuck (1.9.2)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - fluwx (from `.symlinks/plugins/fluwx/ios`)
+  - jjcode_flutter_plugin (from `.symlinks/plugins/jjcode_flutter_plugin/ios`)
+
+SPEC REPOS:
+  trunk:
+    - JijiancodeSDK
+    - WechatOpenSDK_Fuck
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  fluwx:
+    :path: ".symlinks/plugins/fluwx/ios"
+  jjcode_flutter_plugin:
+    :path: ".symlinks/plugins/jjcode_flutter_plugin/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  fluwx: c192ef1ea3617badb813fa1a761ffc5c9c12208a
+  JijiancodeSDK: 47babf17621a0ed18af66556651ef8b3a27241a2
+  jjcode_flutter_plugin: f904466adfe81c989fca670db92f6077afc0ef29
+  WechatOpenSDK_Fuck: aa8f4b0af902837e887a1d40c62f06c060c1dc98
+
+PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+
+COCOAPODS: 1.11.2
