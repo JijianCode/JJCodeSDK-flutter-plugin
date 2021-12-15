@@ -40,7 +40,9 @@ static NSString * const key_token = @"token";
     dict[@"userName"] = reqUserName;
     dict[@"path"] = reqPath;
     [self.flutterMethodChannel invokeMethod:@"wxHandler" arguments:dict result:^(id  _Nullable result) {
-        if (result == nil) {
+        if ([result isKindOfClass:[FlutterError class]]) {
+            FlutterError* error = (FlutterError*)result;
+            NSLog(@"wxHandler error code: %@, message: %@", error.code, error.message);
             reqCompletion(NO);
         } else {
             reqCompletion(YES);
@@ -57,14 +59,14 @@ static NSString * const key_token = @"token";
                 phone = (NSString*)mobile;
             }
         }
-        
+
         [JJCode verify:phone success:^(NSString * _Nonnull mobile, NSString * _Nonnull token) {
             NSDictionary *ret = [JjcodeFlutterPlugin parseToResultDict:200 :@"ok" :mobile :token];
             [self response:ret];
         } fail:^(NSInteger code, NSString * _Nonnull message) {
             NSDictionary *ret = [JjcodeFlutterPlugin parseToResultDict:code :message :nil :nil];
             [self response:ret];
-        }];
+        } showLoading: false];
         
     } else if ([@"handleWxResp" isEqualToString:call.method]) {
         NSString* extMsg = @"";

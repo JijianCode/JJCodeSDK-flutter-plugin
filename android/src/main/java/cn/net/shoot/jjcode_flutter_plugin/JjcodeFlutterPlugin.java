@@ -72,7 +72,7 @@ public class JjcodeFlutterPlugin implements FlutterPlugin, MethodCallHandler {
           map.put("msg", msg);
           channel.invokeMethod("verifyResponse", map);
         }
-      });
+      }, false);
     } else if(call.method.equals("handleWxResp")){
       result.success("call handleWxResp method success.");
       JJCode.handleWXResp(call.argument("extMsg"));
