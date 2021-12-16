@@ -1,4 +1,4 @@
-# jjcode_flutter_plugin
+# jjcode_flutter_plugin 极简验证 Flutter SDK
 
 ### 集成前必读：
 
